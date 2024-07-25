@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login-form</title>
+    <style>
+        /*Login*/
+        #Profile {
+            width: 100%;
+            height: 620px;
+            padding: 70px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), beige);
+        }
+
+        .title-text {
+            text-align: center;
+            padding-bottom: 70px;
+        }
+
+        .title-text p {
+            margin: auto;
+            font-size: 30px;
+            color: black;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .title-text h1 {
+            font-size: 50px;
+            color: dimgray;
+            font-family: 'Times New Roman', sans-serif;
+
+        }
+
+        .loginbox {
+            width: 320px;
+            height: 420px;
+            background: #000;
+            color: aliceblue;
+            top: 63%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding: 70px 30px;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            left: calc(50% - 50px);
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0 0 20px;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .loginbox p {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+
+        .loginbox input {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .loginbox input[type="text"],
+        input[type="password"] {
+            border: none;
+            border-bottom: 1px solid #f1e6e6;
+            outline: none;
+            height: 40px;
+            background-color: #000;
+            font-size: 13px;
+            color: aliceblue;
+            text-align: center;
+        }
+        .loginbox input[type="password"]{
+            margin-bottom: 5px;
+        }
+        .loginbox .button input {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: grey;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+
+        .button input:hover {
+            cursor: pointer;
+            background: rgb(165, 157, 158);
+            color: black;
+        }
+
+        .loginbox a {
+            font-size: 12px;
+            color: rgb(102, 94, 125);
+
+        }
+        .loginbox a:hover {
+            color: rgb(226, 6, 6);
+        }
+        .loginbox .login-pass{
+            font-size: 14px;
+            text-align:left;
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+        .loginbox .login-sign{
+            font-size: 14px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        @media screen and (max-width:770px) {
+            .loginbox {
+                width: 320px;
+                height: 420px;
+                top: 152%;
+                left: 50%;
+            }
+
+            .title-text h1 {
+                font-size: 44px;
+            }
+
+            .title-text p {
+                font-size: 20px;
+            }
+        }
+
+        .pop-up {
+            width: 100%;
+            height: 100vh;
+            background: #3c5077;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pop {
+            width: 400px;
+            background: white;
+            border-radius: 6px;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.1);
+            text-align: center;
+            padding: 0 30px 30px;
+            color: #333;
+            visibility: hidden;
+            transition: transform 0.4s, top 0.4s;
+        }
+
+        .open-popup {
+            visibility: visible;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .pop img {
+            width: 100px;
+            margin-top: -50px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+        }
+
+        .pop h2 {
+            font-size: 38px;
+            font-weight: 500;
+            margin: 30px 0 10px;
+        }
+
+        .pop p {
+            font-size: 26px;
+        }
+
+        .pop .btnn {
+            width: 100%;
+            margin-top: 50px;
+            padding: 10px 0;
+            background: #6fd649;
+            color: #fff;
+            outline: none;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Login-->
+    <section id="Profile">
+        <div class="title-text">
+            <p>LOGIN</p>
+            <h1>Join Us!!</h1>
+        </div>
+    </section>
+    <div class="loginbox" >
+        <img src="./avatar.png" class="avatar">
+        <h1>Login Here</h1>
+        <form action="#">
+            <p>Email or Phone</p>
+            <input type="text" name="email" placeholder="Enter email or phone number" required>
+            <p>Password</p>
+            <input type="password" name="" placeholder="Enter Password" required>
+            <div class="login-pass">
+                <a href="#">forgot password?</a><br>
+            </div>
+            <div class="input-field button">
+                <input type="button" name="" value="Login" required>
+            </div>
+            <div class="login-sign">
+                <span>Don't have an account? </span>
+                <a href="demo.html">Signup now</a>
+            </div>
+        </div>
+        </form>
+    </div>
+
+
+    <!--pop up after login-->
+    <!--<button type="submit" class="bt" onclick="openPopup()">Submit</button>-->
+    <div class="pop" id="popup">
+        <img src="tick.jpg">
+        <h2>Thank You!!</h2>
+        <p>You're loggedd in successfully!!</p>
+        <button type="button" onclick="closePopup()" href="#banner">OK</button>
+    </div>
+    <script>
+        let popup = document.getElementById("popup");
+        function openPopup() {
+            pop.classlist.add("open-popup");
+        }
+        function closePopup() {
+            pop.classlist.remove("open-popup");
+        }
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
